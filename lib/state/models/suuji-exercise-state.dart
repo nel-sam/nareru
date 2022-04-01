@@ -1,13 +1,12 @@
-import 'package:nareru/state/models/count-exercise-state.dart';
-import 'package:nareru/state/models/age-exercise-state.dart';
-import 'package:nareru/state/models/jikan-exercise-state.dart';
+import 'package:nareru/state/age/age-exercise-state.dart';
+import 'package:nareru/state/count/count-exercise-state.dart';
+import 'package:nareru/state/jikan/jikan-exercise-state.dart';
 
-
+// TODO: remove this file
 class SuujiExerciseState {
   List<CountExerciseState> countExercises;
   List<AgeExerciseState> ageExercises;
   List<JikanExerciseState> jikanExercises;
-
 
   late List<dynamic> _all = [];
 

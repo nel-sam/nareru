@@ -1,8 +1,17 @@
 {
+  "home": "Home",
+  "previous": "Previous",
+  "next": "Next",
+  "clear": "Clear",
+  "exercise": "Exercise",
   "numbers": "Numbers",
+  "time": "Time",
+  "age": "Age",
+  "counting": "Counting",
   "nativeNumbers": "Native Numbers",
   "sinoNumbers": "Sino Numbers",
   "numberChart": "Number chart",
+  "numbersExercise": "Numbers",
   "typeTheTime": "Write the time in hiragana",
   "timeDesc": "For the hours, minutes, and seconds use Sino numbers (いち, に, さん)"
 }

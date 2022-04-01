@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nareru/hd-helpers.dart';
-import 'package:nareru/state/models/count-exercise-state.dart';
+import 'package:nareru/state/count/count-exercise-state.dart';
 
 class CountingExercise extends StatefulWidget {
   final CountExerciseState state;
@@ -46,9 +46,9 @@ class _CountingExerciseState extends State<CountingExercise> {
                   decoration: InputDecoration(
                     isDense: true,
                     contentPadding: EdgeInsets.fromLTRB(4, 18, 0, 1),
-                    enabledBorder: HD.getTextFieldBorder(
+                    enabledBorder: Nar.getTextFieldBorder(
                         widget.state.correctAnswer, widget.state.userInput),
-                    focusedBorder: HD.getTextFieldBorder(
+                    focusedBorder: Nar.getTextFieldBorder(
                         widget.state.correctAnswer, widget.state.userInput),
                   ),
                   onChanged: (String? newVal) {

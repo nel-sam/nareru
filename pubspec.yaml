@@ -1,11 +1,11 @@
 name: nareru
 description: A new Flutter project.
 
-publish_to: "none"
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
@@ -17,13 +17,17 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   provider: ^5.0.0
+  # google_mobile_ads: ^1.0.1
+
+  nrs_flutter_lib:
+    path: ../nrs-flutter-lib
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   # flutter pub run flutter_launcher_icons:main
-  flutter_launcher_icons: "^0.8.0"
+  flutter_launcher_icons: '^0.8.0'
   flutter_native_splash: ^0.2.8
 
 flutter:
@@ -44,14 +48,14 @@ flutter_icons:
 
 # flutter clean && flutter pub get && flutter pub run flutter_native_splash:create
 flutter_native_splash:
-  color: "#1f96f3"
+  color: '#ffffff'
   image: assets/splash.png
-  color_dark: "#2b2b2f"
+  color_dark: '#2b2b2f'
   android: true
   ios: true
 
   # Commands:
   # Build deployable IOS:         flutter build ipa
-  # Build deployable Android:     flutter build appbundle
+  # Build deployable Android:     flutter build app bundle
   # Build debug installable IOS:  flutter build ios
   # Install on phone:             flutter install

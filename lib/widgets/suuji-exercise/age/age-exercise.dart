@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nareru/hd-helpers.dart';
-import 'package:nareru/state/models/age-exercise-state.dart';
+import 'package:nareru/state/age/age-exercise-state.dart';
 
 class AgeExercise extends StatefulWidget {
   final AgeExerciseState state;
@@ -36,9 +36,9 @@ class _AgeExerciseState extends State<AgeExercise> {
                     decoration: InputDecoration(
                       isDense: true,
                       contentPadding: EdgeInsets.fromLTRB(4, 18, 0, 1),
-                      enabledBorder: HD.getTextFieldBorder(
+                      enabledBorder: Nar.getTextFieldBorder(
                           widget.state.correctAnswer, widget.state.userInput),
-                      focusedBorder: HD.getTextFieldBorder(
+                      focusedBorder: Nar.getTextFieldBorder(
                           widget.state.correctAnswer, widget.state.userInput),
                     ),
                     onChanged: (String? newVal) {

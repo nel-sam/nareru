@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:nareru/constants.dart';
-import 'package:nareru/state/suuji.exercise-notifier.dart';
-import 'package:nareru/widgets/suuji-exercise/suuji-exercise.dart';
-import 'package:provider/provider.dart';
+import 'package:nareru/widgets/menus/main-menu.dart';
+import 'package:nrs_flutter_lib/nrs_flutter_lib.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,18 +12,19 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final title = 'Nareru';
-
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: title,
+        title: APP_NAME,
         localizationsDelegates: [
           AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate
         ],
-        supportedLocales: [const Locale('en', ''), const Locale('es', '')],
+        supportedLocales: [
+          const Locale('en', ''),
+          const Locale('es', ''),
+        ],
         theme: ThemeData(
           brightness: Brightness.light,
           primarySwatch: ACCENT_COLOR,
@@ -36,9 +36,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: const Color(0xFF212121),
           dividerColor: Colors.black12,
         ),
-        home: MultiProvider(providers: [
-          ChangeNotifierProvider(create: (_) => SuujiExerciseNotifier()),
-        ], child: SuujiExercise()));
+        home: MyHomePage(title: APP_NAME));
   }
 }
 
@@ -54,14 +52,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+      appBar: Nrs.NrsAppBar(
+        title: widget.title,
+        context: context,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[],
-        ),
+        child: MainMenu(),
       ),
     );
   }
