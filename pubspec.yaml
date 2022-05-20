@@ -17,7 +17,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   provider: ^5.0.0
-  # google_mobile_ads: ^1.0.1
+  # google_mobile_ads: ^1.2.0
 
   nrs_flutter_lib:
     path: ../nrs-flutter-lib
